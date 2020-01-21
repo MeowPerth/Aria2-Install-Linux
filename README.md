@@ -1,4 +1,4 @@
-# Aria2-LNMP
+# Aria2-Install
 本项目适用于Centos等Linux系统。
 包含"aria2.sh"安装脚本，以及其他相关文件。<br>
 “Original”文件夹中是原本的脚本。
