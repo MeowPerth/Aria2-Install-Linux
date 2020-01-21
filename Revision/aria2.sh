@@ -575,7 +575,7 @@ action=$1
 if [[ "${action}" == "update-bt-tracker" ]]; then
 	Update_bt_tracker_cron
 else
-echo && echo -e " Aria2 一键安装管理脚本-H酱改版 ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}
+echo && echo -e " Aria2 一键安装管理脚本-H酱 ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}
   -- Toyo | doub.io/shell-jc4 --
   
  ${Green_font_prefix} 0.${Font_color_suffix} 升级脚本
