@@ -17,7 +17,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/MeowPerth/Aria2
 
 使用H酱修改过的脚本进行安装Aria2
 ```
-wget -N --no-check-certificate https://raw.githubusercontent.com/MeowPerth/Aria2-LNMP/master/Original/aria2.sh && chmod +x aria2.sh && bash aria2.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/MeowPerth/Aria2-LNMP/master/Revision/aria2.sh && chmod +x aria2.sh && bash aria2.sh
 ```
 
 
