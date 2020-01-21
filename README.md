@@ -1,7 +1,7 @@
 # Aria2-LNMP
 本项目适用于Centos等Linux系统。
 包含"aria2.sh"安装脚本，以及其他相关文件。<br>
-“Original”文件夹是原本的脚本。
+“Original”文件夹中是原本的脚本。
 创建此项目目的在于存档记录部分已知问题的解决方式。
 
 ## 原版“aria2.sh”
@@ -24,10 +24,15 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/MeowPerth/Aria2
 
 * ### “提示：Aria2 DHT文件下载失败 !”
 	在```/root/.aria/```目录下存入```dht.dat```（文件在在项目对应文件中）<br>
-	若对应路径中不存在，则创建对应目录。
+	若对应路径中不存在，则创建对应目录。使用``` mkdir```命令创建文件夹。<br>
+	PS:同上一个已知问题一样。
 
 * ### “提示：Aria2服务 管理脚本下载失败 !”
 	在```/etc/init.d/```目录下存入```aria2```（文件在在项目对应文件中）<br>
-	若对应路径中不存在，则创建对应目录。
+	若对应路径中不存在，则创建对应目录。使用``` mkdir```命令创建文件夹。<br>
 
-* ### “” 
+## 相关扩展
+若需要修改配置，可以手动修改配置，也可以运行此脚本```bash aria2.sh```,进行快捷修改。<br>
+修改后切记重启Aria2。
+* 启动Aria2	```/etc/init.d/aria2 start```<br>
+* 停止Aria2	```/etc/init.d/aria2 stop```
