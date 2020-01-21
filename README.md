@@ -13,7 +13,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/MeowPerth/Aria2
 ```
 
 
-## 魔改版“aria2.sh”
+## 改版“aria2.sh”
 
 使用H酱修改过的脚本进行安装Aria2
 ```

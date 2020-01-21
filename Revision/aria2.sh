@@ -132,7 +132,7 @@ Download_aria2_conf(){
 	mkdir "${file}" && cd "${file}"
 	wget --no-check-certificate -N "https://raw.githubusercontent.com/MeowPerth/Aria2-LNMP/master/root/.aria2/aria2.conf"
 	[[ ! -s "aria2.conf" ]] && echo -e "${Error} Aria2 配置文件下载失败 !" && rm -rf "${file}" && exit 1
-	wget --no-check-certificate -N "https://github.com/MeowPerth/Aria2-LNMP/blob/master/root/.aria2/dht.dat?raw=true"
+	wget --no-check-certificate -N "https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/other/Aria2/dht.dat"
 	[[ ! -s "dht.dat" ]] && echo -e "${Error} Aria2 DHT文件下载失败 !" && rm -rf "${file}" && exit 1
 	echo '' > aria2.session
 	sed -i 's/^rpc-secret=DOUBIToyo/rpc-secret='$(date +%s%N | md5sum | head -c 20)'/g' ${aria2_conf}
