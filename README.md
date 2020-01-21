@@ -5,17 +5,20 @@
 “Original”文件夹是原本的脚本。
 
 
-# 原版“aria2.sh”
+## 原版“aria2.sh”
 
 获取原版安装脚本安装Aria2
+```
+wget -N --no-check-certificate https://github.com/MeowPerth/Aria2-LNMP/blob/master/Original/aria2.sh && chmod +x aria2.sh && bash aria2.sh
+```
 
-  wget -N --no-check-certificate https://github.com/MeowPerth/Aria2-LNMP/blob/master/Original/aria2.sh && chmod +x aria2.sh && bash aria2.sh
 
-
-# 魔改版“aria2.sh”
+## 魔改版“aria2.sh”
 
 使用H酱修改过的脚本进行安装Aria2
+```
   wget -N --no-check-certificate https://github.com/MeowPerth/Aria2-LNMP/blob/master/Revision/aria2.sh && chmod +x aria2.sh && bash aria2.sh
+```
 
 
-#注意事项
+##注意事项
