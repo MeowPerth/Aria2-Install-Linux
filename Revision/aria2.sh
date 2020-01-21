@@ -130,16 +130,16 @@ Download_aria2(){
 }
 Download_aria2_conf(){
 	mkdir "${file}" && cd "${file}"
-	wget --no-check-certificate -N "https://github.com/MeowPerth/Aria2-LNMP/blob/master/root/.aria2/aria2.conf"
+	wget --no-check-certificate -N "https://raw.githubusercontent.com/MeowPerth/Aria2-LNMP/master/root/.aria2/aria2.conf"
 	[[ ! -s "aria2.conf" ]] && echo -e "${Error} Aria2 配置文件下载失败 !" && rm -rf "${file}" && exit 1
-	wget --no-check-certificate -N "https://github.com/MeowPerth/Aria2-LNMP/blob/master/root/.aria2/dht.dat"
+	wget --no-check-certificate -N "https://raw.githubusercontent.com/MeowPerth/Aria2-LNMP/blob/master/root/.aria2/dht.dat"
 	[[ ! -s "dht.dat" ]] && echo -e "${Error} Aria2 DHT文件下载失败 !" && rm -rf "${file}" && exit 1
 	echo '' > aria2.session
 	sed -i 's/^rpc-secret=DOUBIToyo/rpc-secret='$(date +%s%N | md5sum | head -c 20)'/g' ${aria2_conf}
 }
 Service_aria2(){
 	if [[ ${release} = "centos" ]]; then
-		if ! wget --no-check-certificate https://github.com/MeowPerth/Aria2-LNMP/blob/master/etc/int.d/aria2; then
+		if ! wget --no-check-certificate https://raw.githubusercontent.com/MeowPerth/Aria2-LNMP/master/etc/int.d/aria2; then
 			echo -e "${Error} Aria2服务 管理脚本下载失败 !" && exit 1
 		fi
 		chmod +x /etc/init.d/aria2
@@ -575,7 +575,7 @@ action=$1
 if [[ "${action}" == "update-bt-tracker" ]]; then
 	Update_bt_tracker_cron
 else
-echo && echo -e " Aria2 一键安装管理脚本 ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}
+echo && echo -e " Aria2 一键安装管理脚本-H酱改版 ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}
   -- Toyo | doub.io/shell-jc4 --
   
  ${Green_font_prefix} 0.${Font_color_suffix} 升级脚本
