@@ -14,7 +14,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/MeowPerth/Aria2
 ## 已知问题
 由于有国内长城的存在，可能会导致获取文件失败，而非大陆主机（网络）下基本不会出现此问题。
 * ### “提示：Aria2 配置文件下载失败 !”
-	在```/root/.aria/目录下存入“aria2.conf”（文件在在项目对应文件中）<br>
+	在```/root/.aria/```目录下存入“aria2.conf”（文件在在项目对应文件中）<br>
 	
 
 * ### “提示：Aria2 DHT文件下载失败 !”
