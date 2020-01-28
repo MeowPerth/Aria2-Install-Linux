@@ -14,7 +14,11 @@ Response = MsgBox(Msg, Style, Title)
 If Response = vbYes Then	'用户按下“是”按钮
   if instr(1,CreateObject("wscript.shell").exec("tasklist").stdout.readall,"aria2c.exe")=0 then
     CreateObject("WScript.Shell").Run ".\aria2c.exe --conf-path=aria2.conf",0 '通过配置文件启动Aria2
-    WScript.Echo("就绪：Aria2成功启动。")
+      if instr(1,CreateObject("wscript.shell").exec("tasklist").stdout.readall,"aria2c.exe")=0 then
+        WScript.Echo("错误：Aria2启动失败！请确认根目录下是否存在 aria2.conf 配置文件")
+      else
+        WScript.Echo("就绪：Aria2成功启动。")
+      end if
   else
     WScript.Echo("警告：Aria2正在运行中") '提示Aria2正在运行中
   end if
@@ -23,7 +27,11 @@ ElseIf Response = vbNo Then	'用户按下“否”按钮
     WScript.Echo("警告：Aria2未运行！")
   else
     CreateObject("wscript.shell").Run "taskkill /f /im aria2c.exe",0
-    WScript.Echo("就绪：Aria2已结束运行。")
+      if instr(1,CreateObject("wscript.shell").exec("tasklist").stdout.readall,"aria2c.exe")=0 then
+        WScript.Echo("就绪：Aria2已停止！")
+      else
+        WScript.Echo("错误：Aria2停止失败，请重试！")
+      end if
   end if
 Else	'用户按下“取消”按钮
 

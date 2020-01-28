@@ -37,6 +37,7 @@ wget -N --no-check-certificate https://https://raw.githubusercontent.com/MeowPer
 * 停止Aria2	```/etc/init.d/aria2 stop```
 
 ----
+----
 
 # Aria2-Install-Windows
 本项目适用于Windows32位或64位系统。（文件在Windows文件夹中）
@@ -58,4 +59,8 @@ wget -N --no-check-certificate https://https://raw.githubusercontent.com/MeowPer
 	再次尝试，若还是不行请在任务管理器中手动结束 `aria2c.exe` 。
 
 ## 相关扩展及注意事项
-*切记在启动程序前确保根目录下已有配置文件，否则程序可能无法正常启动。
+> ### 相关扩展
+> * 修改下载路径：在 `aria2.conf` 配置文件中修改，重启程序后即可生效；
+> * 配置开机启动：创建VBS控制台快捷方式，放入```C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup```
+> ### 注意事项
+* 切记在启动程序前确保根目录下已有配置文件，否则程序可能无法正常启动。
