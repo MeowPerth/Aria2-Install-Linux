@@ -63,7 +63,7 @@ wget -N --no-check-certificate https://https://raw.githubusercontent.com/MeowPer
 > * 修改下载路径：在 `aria2.conf` 配置文件中修改，重启程序后即可生效；
 > * 配置开机启动：创建VBS控制台程序的快捷方式，放入```C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup```
 > * VBS程序扩展：
->> ①启动命令：```CreateObject("WScript.Shell").Run ".\aria2c.exe --conf-path=aria2.conf",0```
+>> ①启动命令：```CreateObject("WScript.Shell").Run ".\aria2c.exe --conf-path=aria2.conf",0```<br>
 >> ②停止命令：```CreateObject("wscript.shell").Run "taskkill /f /im aria2c.exe",0```
 > ### 注意事项
 > * 切记在启动程序前确保根目录下已有配置文件，否则程序可能无法正常启动。
