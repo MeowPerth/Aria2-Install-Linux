@@ -54,7 +54,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/MeowPerth/Aria2
 > * 停止Aria2	```/etc/init.d/aria2 stop```
 
 ## 友情链接
-* Aria2 Windows桌面安装：``````
+* Aria2 Windows桌面安装：```https://github.com/MeowPerth/Aria2-Install-Windows```
 * Aria2 P3TERX 完美安装脚本：```https://github.com/P3TERX/aria2.sh```
 ----
 ----
