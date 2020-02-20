@@ -47,6 +47,15 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/MeowPerth/Aria2
 > 若对应路径中不存在，则创建对应目录。使用``` mkdir```命令创建文件夹。<br>
 
 ## 相关扩展
+Aria2下载完成后文件所属权是 `root` ，因此，在使用FTP对下载文件进行操作是可能会出现操作权限等问题。<br>
+此时可用到 `aria2.conf` 中的参数 `on-download-complete=` ,此参数是当文件下载完成后自行对应脚本。<br>
+参数后面接对应需要执行的脚本路径即可，更多此参数的用法请自行查阅。<br>
+> * 脚本示例：<br>
+>> 脚本名：“cp.sh” <br>
+```>> #!/bin/bash<br>
+>> chown -R www:www /FTP/```<br>
+> * 参数示例：	```on-download-complete=/root/.aria2/cp.sh```<br>
+
 进行本地安装，请先确认 Aria2 主程序及配置文件的压缩包在`/root`目录下。<br>
 若需要修改配置，可以手动修改配置，也可以运行此脚本```bash aria2.sh```,进行快捷修改。<br>
 修改后切记重启Aria2。
