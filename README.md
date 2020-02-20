@@ -52,8 +52,10 @@ Aria2下载完成后文件所属权是 `root` ，因此，在使用FTP对下载�
 参数后面接对应需要执行的脚本路径即可，更多此参数的用法请自行查阅。<br>
 > * 脚本示例：<br>
 >> 脚本名：“cp.sh” <br>
-```>> #!/bin/bash<br>
->> chown -R www:www /FTP/```<br>
+```
+#!/bin/bash<br>
+chown -R www:www /FTP/
+```<br>
 > * 参数示例：	```on-download-complete=/root/.aria2/cp.sh```<br>
 
 进行本地安装，请先确认 Aria2 主程序及配置文件的压缩包在`/root`目录下。<br>
