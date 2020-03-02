@@ -53,6 +53,7 @@ Aria2下载完成后文件所属权是 `root` ，因此，在使用FTP对下载�
 > * 脚本示例：<br>
 >> 脚本名：“cp.sh” <br>
 >> #!/bin/bash<br>
+>> path=$3
 >> chown -R www:www /FTP/<br>
 > * 参数示例：	```on-download-complete=/root/.aria2/cp.sh```<br>
 
