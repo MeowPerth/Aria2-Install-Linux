@@ -49,11 +49,11 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/MeowPerth/Aria2
 ## 相关扩展
 Aria2下载完成后文件所属权是 `root` ，因此，在使用FTP对下载文件进行操作是可能会出现操作权限等问题。<br>
 此时可用到 `aria2.conf` 中的参数 `on-download-complete=` ,此参数是当文件下载完成后自行对应脚本。<br>
-参数后面接对应需要执行的脚本路径即可，更多此参数的用法请自行查阅。<br>
+参数后面接对应需要执行的脚本路径即可， `$3` 传参下载路径，更多此参数的用法请自行查阅。<br>
 > * 脚本示例：<br>
 >> 脚本名：“cp.sh” <br>
 >> #!/bin/bash<br>
->> path=$3
+>> path=$3<br>
 >> chown -R www:www /FTP/<br>
 > * 参数示例：	```on-download-complete=/root/.aria2/cp.sh```<br>
 
